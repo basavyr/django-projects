@@ -8,7 +8,7 @@ def index(request):
     context = {
         'name': name
     }
-    return render(request, 'index.html', context)
+    return render(request, 'app1/app1.html', context)
 
 
 def hello(request):
@@ -20,4 +20,4 @@ def hello(request):
         'user_agent': user_agent
     }
 
-    return render(request, 'hello.html', context)
+    return render(request, 'app1/hello.html', context)
