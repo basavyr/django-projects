@@ -1,11 +1,14 @@
 from django.shortcuts import render
 
-# Create your views here.
-
 
 def index(request):
+
+    return render(request, 'forms/forms.html')
+
+
+def show_forms(request):
     context = {
-        "list": [1, 2, 3]
+        "my_list": [1, 2, 3]
     }
 
-    return render(request, 'forms/forms.html', context)
+    return render(request, 'forms/show_forms.html', context)
