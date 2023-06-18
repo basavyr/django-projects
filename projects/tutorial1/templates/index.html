@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Main App</h1>
-    {% if name %}
-        <p>Hey there, {{ name }}</p>
-    {% else %}
-        <p>Hey from Gicu</p>
-    {% endif %}
+<h1>Django App</h1>
+<p>This is a standalone Django Project with several apps.</p>
+
+<div class="list-group">
+    <a href="{% url 'app1:index' %}" class="list-group-item list-group-item-action">App1</a>
+    <a href="{% url 'forms:index' %}" class="list-group-item list-group-item-action">Forms</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Other Apps (Soon)</a>
+  </div>
+
 {% endblock %}
 
