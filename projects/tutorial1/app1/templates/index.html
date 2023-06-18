@@ -2,5 +2,9 @@
 
 {% block content %}
     <h1>Main App</h1>
-    <p>Hey there</p>
+    {% if name %}
+        <p>Hey there, {{ name }}</p>
+    {% else %}
+        <p>Hey from Gicu</p>
+    {% endif %}
 {% endblock %}

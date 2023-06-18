@@ -4,7 +4,11 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+    name = request.GET.get('name', None)
+    context = {
+        'name': name
+    }
+    return render(request, 'index.html', context)
 
 
 def hello(request):
